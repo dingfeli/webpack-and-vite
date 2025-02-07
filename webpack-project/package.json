@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "preinstall": "cd ../vite-project && npm i && npm run build && npm pack",
+    "preinstall": "cd ../vite-project && npm i && npm run build && npm pack && rm -rf dist node_modules",
     "build": "webpack",
     "watch": "webpack --watch",
     "type-check": "tsc --noEmit",

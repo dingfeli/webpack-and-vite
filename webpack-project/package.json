@@ -14,7 +14,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "vite-project": "file:/Users/dingfeli/doodle/webpack-and-vite/vite-project"
+    "vite-project": "file:../vite-project"
   },
   "devDependencies": {
     "@types/node": "^22.13.1",

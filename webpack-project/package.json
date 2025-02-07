@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-vite-project && webpack",
-    "build-vite-project": "cd ../vite-project && npm run build",
+    "preinstall": "cd ../vite-project && npm i && npm run build && npm pack",
+    "build": "webpack",
     "watch": "webpack --watch",
     "type-check": "tsc --noEmit",
     "build:types": "tsc --emitDeclarationOnly"
@@ -14,7 +14,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "vite-project": "file:../vite-project"
+    "vite-project": "file:../vite-project/vite-project-0.0.0.tgz"
   },
   "devDependencies": {
     "@types/node": "^22.13.1",

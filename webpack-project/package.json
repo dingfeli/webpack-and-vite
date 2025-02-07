@@ -1,0 +1,25 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "type-check": "tsc --noEmit",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "vite-project": "file:/Users/dingfeli/doodle/webpack-and-vite/vite-project"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

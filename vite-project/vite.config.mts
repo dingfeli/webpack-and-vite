@@ -13,6 +13,9 @@ export default defineConfig({
             name: 'MyLib',
             fileName: 'my-lib',
         },
+        rollupOptions: {
+            external: ['node:fs']
+        }
     },
     plugins: [
         dts({

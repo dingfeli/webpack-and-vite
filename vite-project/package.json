@@ -14,7 +14,8 @@
       "types": "./dist/types/my-lib.d.ts",
       "import": "./dist/my-lib.js",
       "require": "./dist/my-lib.umd.cjs"
-    }
+    },
+    "./some_file": "./dist/some_file"
   },
   "scripts": {
     "dev": "vite",
@@ -22,6 +23,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^22.13.1",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
     "vite-plugin-dts": "^4.5.0"

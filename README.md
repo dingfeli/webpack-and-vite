@@ -33,6 +33,7 @@ import 'vite-project/some_file';
 ### vite project set up
 This is the library package (i.e. vector lib) and it has the following responsibilities:
 - Produce a cjs file to be consumed. 
+- Exports relevant static assets to the consuming packge (which would then need to be referenced by the consuming package's build logic).
 
 #### Simulating normal dependency declaration
 To simulate a normal project building between a package and its dependencies where the dependencies output is downloaded from a registry (such as npm) and into the consuming package's `node_modules`, the following happens during building of the webpack package:

@@ -5,6 +5,12 @@ This package has the following set up:
 - A library package that is built with vite, named "vite-project". This package is consumed by webpack-project. 
 - vite-project also provides some static assets that is made available to the consuming package in its node_modules subfolder. It is up to the consuming package to rellocate these assets for the final build.
 
+To test it end to end:
+- The function `printFileContent` is defined in vite-project and made available to be called by the consuming package.
+- In the consuming package, this function is called with path to an asset that is made available by vite-project. 
+- cd into `webpack-project` and run `npm run build`.
+- Run the bundled js file via `node dist/index.js` and observe that stdout is printing out the content of the aforementioned static file provided by vite-project.
+
 ## Note worthy points (that are new to me)
 **Before you build**:
 - Remove from webpack project `dist/`, `node_modules/`, and `package-lock.json`. 

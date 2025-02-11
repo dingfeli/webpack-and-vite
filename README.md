@@ -1,5 +1,9 @@
 ## Premise
 This package is made to understand / verify the declaring a dependency on a vite built project from a package that is built with webpack.
+This package has the following set up:
+- A consuming package that is built with webpack, named "webpack-project"
+- A library package that is built with vite, named "vite-project". This package is consumed by webpack-project. 
+- vite-project also provides some static assets that is made available to the consuming package in its node_modules subfolder. It is up to the consuming package to rellocate these assets for the final build.
 
 ## Note worthy points (that are new to me)
 **Before you build**:
@@ -53,4 +57,5 @@ Formally declare an intent to export the static assets in `package.json`:
     "./some_file": "./dist/some_file"
   },
 ```
-
+Note that vite advises users to place static assets in `root/public/` (see [doc](https://vite.dev/guide/assets.html#the-public-directory)).
+Files in this directory will be copied to `dist/` as is (this would save us from having to write a bunch of config using `viteStaticCopy` in vite config).

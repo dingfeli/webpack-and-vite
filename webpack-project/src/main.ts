@@ -1,7 +1,6 @@
 import * as vp from 'vite-project';
 import path from 'path';
 import 'vite-project/some_file';
-import 'vite-project/hello.node';
 
 function main(): void {
     const a = 1;

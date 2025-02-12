@@ -15,7 +15,8 @@
       "import": "./dist/my-lib.js",
       "require": "./dist/my-lib.umd.cjs"
     },
-    "./some_file": "./dist/some_file"
+    "./some_file": "./dist/some_file",
+    "./hello.node": "./dist/hello.node"
   },
   "scripts": {
     "dev": "vite",

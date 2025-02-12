@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     target: 'node',
@@ -20,12 +21,31 @@ module.exports = {
                         outputPath: 'assets/'
                     }
                 }
-            }
+            },
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
+    externals: [
+        // Exclude .node files from being processed by webpack
+        function({ context, request }, callback) {
+            if (/\.node$/.test(request)) {
+                return callback(null, 'commonjs ' + request);
+            }
+            callback();
+        }
+    ],
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: 'node_modules/vite-project/dist/hello.node',
+                    to: 'hello.node'
+                }
+            ]
+        })
+    ],
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),

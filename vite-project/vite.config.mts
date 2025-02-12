@@ -14,7 +14,7 @@ export default defineConfig({
             fileName: 'my-lib',
         },
         rollupOptions: {
-            external: ['node:fs']
+            external: ['node:fs', 'node:path', /\.node$/]
         }
     },
     plugins: [

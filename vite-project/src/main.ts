@@ -1,4 +1,10 @@
 import fs from 'node:fs';
+// import path from 'node:path';
+
+const nativeHello = (() => {
+    // const nativePath = path.join(__dirname, 'hello.node');
+    return require('./hello.node');
+})();
 
 export function add(a: number, b: number): number {
     return a + b;
@@ -22,4 +28,8 @@ export function printFileContent(input_path: string): void {
         console.log(`File content is: ${content}`);
     });
     return;
+}
+
+export function helloFromNative(): void {
+    console.log(nativeHello.hello());
 }
